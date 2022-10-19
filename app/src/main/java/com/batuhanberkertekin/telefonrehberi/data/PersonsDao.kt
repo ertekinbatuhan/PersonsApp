@@ -64,7 +64,7 @@ import com.batuhanberkertekin.telefonrehberi.data.Person
 
             val wt = dt.writableDatabase
 
-            wt.delete("person","not_id=?", arrayOf(not_id.toString()))
+            wt.delete("persons","person_id=?", arrayOf(not_id.toString()))
             wt.close()
 
 

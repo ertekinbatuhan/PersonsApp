@@ -27,6 +27,7 @@ class AddingActivity : AppCompatActivity() {
             if(name.isNotEmpty() && number.isNotEmpty()){
 
                 person.addPerson(dt,name,number.toInt())
+                Toast.makeText(applicationContext,"Tebrikler kişiyi kaydettiniz",Toast.LENGTH_SHORT).show()
 
                 val intent = Intent(applicationContext, MainActivity::class.java)
                 startActivity(intent)
