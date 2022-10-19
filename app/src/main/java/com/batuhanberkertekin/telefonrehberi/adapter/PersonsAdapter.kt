@@ -34,9 +34,9 @@ class PersonsAdapter(private val mcontext : Context, val personList : ArrayList<
         holder.itemView.nameText.text = personList.person_name
         holder.itemView.numberText.text =personList.person_number.toString()
         holder.itemView.imageView.setImageResource(R.drawable.ic_baseline_call_24)
-
+        holder.itemView.imageView2.setImageResource(R.drawable.ic_baseline_delete_24)
         holder.itemView.imageView2.setOnClickListener {
-           // PersonsDao().deleteNot(dt,personList.person_id)
+            PersonsDao().deleteNot(dt,personList.person_id)
 
             val intent = Intent(mcontext,AddingActivity::class.java)
             mcontext.startActivity(intent)
